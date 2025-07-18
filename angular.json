@@ -3,9 +3,8 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-      "angular-covoiturage-app-full": {
+      "p2000-aero-angular": {
         "projectType": "application",
-        "schematics": {},
         "root": "",
         "sourceRoot": "src",
         "prefix": "app",
@@ -13,7 +12,7 @@
           "build": {
             "builder": "@angular-devkit/build-angular:browser",
             "options": {
-              "outputPath": "dist/angular-covoiturage-app-full",
+              "outputPath": "dist/p2000-aero-angular",
               "index": "src/index.html",
               "main": "src/main.ts",
               "polyfills": "src/polyfills.ts",
@@ -25,8 +24,7 @@
               "styles": [
                 "src/styles.css"
               ],
-              "scripts": [],
-              "baseHref": "/p2000-aero-angular/"
+              "scripts": []
             },
             "configurations": {
               "production": {
@@ -44,18 +42,25 @@
                 "aot": true,
                 "extractLicenses": true,
                 "vendorChunk": false,
-                "buildOptimizer": true
+                "buildOptimizer": true,
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "2mb",
+                    "maximumError": "5mb"
+                  }
+                ]
               }
             }
           },
           "serve": {
             "builder": "@angular-devkit/build-angular:dev-server",
             "options": {
-              "browserTarget": "angular-covoiturage-app-full:build"
+              "browserTarget": "p2000-aero-angular:build"
             },
             "configurations": {
               "production": {
-                "browserTarget": "angular-covoiturage-app-full:build:production"
+                "browserTarget": "p2000-aero-angular:build:production"
               }
             }
           },
@@ -92,6 +97,6 @@
         }
       }
     },
-    "defaultProject": "angular-covoiturage-app-full"
+    "defaultProject": "p2000-aero-angular"
   }
   
