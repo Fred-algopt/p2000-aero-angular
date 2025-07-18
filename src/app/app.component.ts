@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
     <header>
       <h1>p2000-aero-angular</h1>
       <nav>
-        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a> |
-        <a routerLink="login" routerLinkActive="active">Connexion</a> |
-        <a routerLink="register" routerLinkActive="active">Inscription</a> |
-        <a routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a> |
+        <a routerLink="/login" routerLinkActive="active">Connexion</a> |
+        <a routerLink="/register" routerLinkActive="active">Inscription</a> |
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       </nav>
       <hr />
     </header>
@@ -34,4 +34,5 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class AppComponent { }
+
+export class AppComponent {}
