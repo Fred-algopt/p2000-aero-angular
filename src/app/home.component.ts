@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: '<h2>Bienvenue sur P2000 Covoiturage</h2>'
+  template: `<h2>Accueil</h2><p>Bienvenue sur la page d'accueil !</p>`
 })
-export class HomeComponent { }
+export class HomeComponent {}
