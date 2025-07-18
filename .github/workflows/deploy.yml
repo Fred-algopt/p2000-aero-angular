@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ta branche principale
+      - main  # Branche principale
   workflow_dispatch:
 
 permissions:
@@ -31,16 +31,16 @@ jobs:
       - name: Install dependencies 📦
         run: npm install
 
-      - name: List files for debug 🔍
-        run: ls -la && ls -la dist || echo "dist folder not found"
-
       - name: Build project 🏗️
         run: npm run build -- --base-href="/p2000-aero-angular/"
 
-      - name: Verify build output 🔍
-        run: ls -la dist/p2000-aero-angular || echo "Build output folder missing"
+      - name: List root and dist files for debug 🔍
+        run: |
+          ls -la
+          ls -la dist || echo "dist folder not found"
+          ls -la dist/p2000-aero-angular || echo "Build output folder missing"
 
-      - name: Upload artifact
+      - name: Upload artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist/p2000-aero-angular
@@ -50,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages 🚀
