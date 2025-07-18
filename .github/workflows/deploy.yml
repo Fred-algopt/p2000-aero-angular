@@ -35,7 +35,7 @@ jobs:
         run: npm run build -- --base-href="/p2000-aero-angular/"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist/p2000-aero-angular
 
