@@ -1,11 +1,10 @@
-
 {
   "name": "angular-covoiturage-app-full",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/angular-covoiturage-app-full/",
+    "build": "ng build",
     "deploy": "ng deploy --base-href=/angular-covoiturage-app-full/"
   },
   "dependencies": {
